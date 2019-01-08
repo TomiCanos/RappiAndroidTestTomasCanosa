@@ -1,4 +1,4 @@
-package com.example.admin.rappiandroidtesttomascanosa.View.Adapters;
+package com.example.admin.rappiandroidtesttomascanosa.view.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -62,7 +62,7 @@ public class MovieAdapter extends RecyclerView.Adapter {
         public MovieViewHolder(View itemView) {
             super(itemView);
 
-            moviePoster = itemView.findViewById(R.id.celda_mini_poster_image);
+            moviePoster = itemView.findViewById(R.id.mini_poster_cell_image);
 
             moviePoster.setOnClickListener(new View.OnClickListener() {
                 @Override

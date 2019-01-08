@@ -1,6 +1,8 @@
 package com.example.admin.rappiandroidtesttomascanosa.model;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
     private String title;
     private String poster_path;
     private String backdrop_path;

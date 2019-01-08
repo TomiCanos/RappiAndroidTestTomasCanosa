@@ -1,5 +1,6 @@
 package com.example.admin.rappiandroidtesttomascanosa.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView popularMoviesRecyclerView;
     private RecyclerView topRatedMoviesRecyclerView;
     private RecyclerView upcomingMoviesRecyclerView;
+    private SelectionNofitier selectionNofitier;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,9 +41,9 @@ public class HomeFragment extends Fragment {
         horizontalTopRatedMoviesRecyclerViewSetter = new HorizontalMoviesRecyclerViewSetter();
         horizontalUpcomingMoviesRecyclerViewSetter = new HorizontalMoviesRecyclerViewSetter();
 
-        popularMoviesRecyclerView = view.findViewById(R.id.fragment_home_recycler_popular);
-        topRatedMoviesRecyclerView = view.findViewById(R.id.fragment_home_recycler_top_rated);
-        upcomingMoviesRecyclerView = view.findViewById(R.id.fragment_home_recycler_upcoming);
+        popularMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_popular);
+        topRatedMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_top_rated);
+        upcomingMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_upcoming);
 
         horizontalPopularMoviesRecyclerViewSetter.setMoviesRecyclerView(popularMoviesRecyclerView, TMDBMovieController.POPULAR);
         horizontalTopRatedMoviesRecyclerViewSetter.setMoviesRecyclerView(topRatedMoviesRecyclerView, TMDBMovieController.TOP_RATED);
@@ -51,6 +53,11 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        selectionNofitier = (SelectionNofitier) context;
+    }
 
     private class HorizontalMoviesRecyclerViewSetter {
         private MovieAdapter movieAdapter;
@@ -66,7 +73,7 @@ public class HomeFragment extends Fragment {
             movieAdapter = new MovieAdapter(movieList, new MovieAdapter.SelectionNofitier() {
                 @Override
                 public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
-                    return;
+                    selectionNofitier.openMovieDetail(movies, moviePosition);
                 }
             });
         }
@@ -109,5 +116,8 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    public interface SelectionNofitier {
+        void openMovieDetail(List<Movie> movies, Integer moviePosition);
+    }
 }
 
