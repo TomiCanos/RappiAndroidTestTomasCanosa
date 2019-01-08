@@ -1,4 +1,4 @@
-package com.example.admin.rappiandroidtesttomascanosa.Model;
+package com.example.admin.rappiandroidtesttomascanosa.model;
 
 import java.util.List;
 

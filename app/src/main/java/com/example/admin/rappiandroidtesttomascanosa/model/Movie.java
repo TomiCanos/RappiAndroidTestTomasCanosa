@@ -1,4 +1,4 @@
-package com.example.admin.rappiandroidtesttomascanosa.Model;
+package com.example.admin.rappiandroidtesttomascanosa.model;
 
 public class Movie {
     private String title;

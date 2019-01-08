@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.channguyen:adv-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adv-1.0.0.aar/0c3cd3dca8b87142823911a94878f5d6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adv-1.0.0.aar/0c3cd3dca8b87142823911a94878f5d6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.channguyen/adv/1.0.0/26f049543e50a632e2fef09a0e53d53e7390bcf9/adv-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

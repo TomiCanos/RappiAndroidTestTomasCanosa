@@ -1,12 +1,12 @@
-package com.example.admin.rappiandroidtesttomascanosa.Retrofit;
+package com.example.admin.rappiandroidtesttomascanosa.retrofit;
 
 import android.util.Log;
 
-import com.example.admin.rappiandroidtesttomascanosa.Model.Movie;
-import com.example.admin.rappiandroidtesttomascanosa.Model.MoviesContainer;
+import com.example.admin.rappiandroidtesttomascanosa.model.Movie;
+import com.example.admin.rappiandroidtesttomascanosa.model.MoviesContainer;
+import com.example.admin.rappiandroidtesttomascanosa.utils.ResultListener;
 
 import java.util.List;
-import java.util.Locale;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -40,7 +40,7 @@ public class TMDBMovieDAO {
 
     }
 
-    public void getCategorizedMovies(String category, Locale language, Integer page, final ResultListener<List<Movie>> resultListener) {
+    public void getCategorizedMovies(String category, String language, Integer page, final ResultListener<List<Movie>> resultListener) {
 
         service.getCategorizedMovies(category, API_KEY, language, page).enqueue(new Callback<MoviesContainer>() {
             @Override
