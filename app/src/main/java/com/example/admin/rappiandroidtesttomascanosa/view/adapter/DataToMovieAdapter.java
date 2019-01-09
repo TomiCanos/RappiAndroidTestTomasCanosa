@@ -15,13 +15,13 @@ import com.example.admin.rappiandroidtesttomascanosa.R;
 
 import java.util.List;
 
-public class MovieAdapter extends RecyclerView.Adapter {
+public class DataToMovieAdapter extends RecyclerView.Adapter {
 
     private List<Movie> movieList;
     private SelectionNofitier selectionNofitier;
     private Context context;
 
-    public MovieAdapter(List<Movie> movieList, SelectionNofitier selectionNofitier) {
+    public DataToMovieAdapter(List<Movie> movieList, SelectionNofitier selectionNofitier) {
         this.movieList = movieList;
         this.selectionNofitier = selectionNofitier;
     }

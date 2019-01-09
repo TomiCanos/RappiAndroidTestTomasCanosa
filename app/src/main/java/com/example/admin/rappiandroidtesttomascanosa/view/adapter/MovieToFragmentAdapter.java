@@ -10,11 +10,11 @@ import com.example.admin.rappiandroidtesttomascanosa.view.MovieDetailFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieAdapterViewPager extends FragmentStatePagerAdapter {
+public class MovieToFragmentAdapter extends FragmentStatePagerAdapter {
 
     private List<Fragment> moviesAsFragments;
 
-    public MovieAdapterViewPager(FragmentManager fm, List<Movie> movieList) {
+    public MovieToFragmentAdapter(FragmentManager fm, List<Movie> movieList) {
         super(fm);
         moviesAsFragments = new ArrayList<>();
 
