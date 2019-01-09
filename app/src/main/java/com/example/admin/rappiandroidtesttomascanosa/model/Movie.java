@@ -13,6 +13,16 @@ public class Movie implements Serializable {
 
     public Movie(){}
 
+    public Movie(String title, String poster_path, String backdrop_path, String overview, String vote_average, String id, String release_date) {
+        this.title = title;
+        this.poster_path = poster_path;
+        this.backdrop_path = backdrop_path;
+        this.overview = overview;
+        this.vote_average = vote_average;
+        this.id = id;
+        this.release_date = release_date;
+    }
+
     public String getTitle() {
         return title;
     }

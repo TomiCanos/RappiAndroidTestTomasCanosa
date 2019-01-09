@@ -6,16 +6,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -38,7 +34,7 @@ public class MovieDetailFragment extends Fragment {
     private Movie movie;
     private String language;
     private RecyclerView similarMoviesRecyclerView;
-    private MoviesRecyclerViewSetter horizontalSimilarMoviesRecyclerViewSetter;
+    private MoviesRecyclerViewSetter similarMoviesGridViewSetter ;
     private SelectionNofitier selectionNofitier;
 
 
@@ -69,10 +65,10 @@ public class MovieDetailFragment extends Fragment {
         Glide.with(this).load("https://image.tmdb.org/t/p/w300" + movie.getBackdrop_path()).into(image);
 
         similarMoviesRecyclerView = view.findViewById(R.id.movie_detail_fragment_recycler_view_similar_movies);
-        horizontalSimilarMoviesRecyclerViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
+        similarMoviesGridViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
             @Override
             public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
-                selectionNofitier.openMovieDetail(movies,moviePosition);
+                selectionNofitier.openMovieDetail(movies, moviePosition);
             }
         });
 
@@ -81,7 +77,7 @@ public class MovieDetailFragment extends Fragment {
         float spanCount = dpWidth / 186;
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), Math.round(spanCount));
-        horizontalSimilarMoviesRecyclerViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), gridLayoutManager);
+        similarMoviesGridViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), gridLayoutManager);
 
         return view;
     }
