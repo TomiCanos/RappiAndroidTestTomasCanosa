@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RappiAndroidTestTomasCanosa</string>
-
+    <string name="home_fragment_first_recycler_title">Popular</string>
+    <string name="home_fragment_second_recycler_title">Top Rated</string>
+    <string name="home_fragment_third_recycler_title">Upcoming</string>
+    <string name="movie_detail_fragment_recycler_title">Similar Titles</string>
 </resources>

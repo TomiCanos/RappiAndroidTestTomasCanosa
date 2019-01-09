@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RappiAndroidTestTomasCanosa</string>
+    <string name="home_fragment_first_recycler_title">Popular</string>
+    <string name="home_fragment_second_recycler_title">Mejor Puntuadas</string>
+    <string name="home_fragment_third_recycler_title">Por Estrenar</string>
+    <string name="movie_detail_fragment_recycler_title">Titulos Similares</string>
+</resources>

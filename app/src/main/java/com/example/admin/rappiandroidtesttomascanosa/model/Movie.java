@@ -9,6 +9,9 @@ public class Movie implements Serializable {
     private String overview;
     private String vote_average;
     private String id;
+    private String release_date;
+
+    public Movie(){}
 
     public String getTitle() {
         return title;
@@ -32,5 +35,9 @@ public class Movie implements Serializable {
 
     public String getId() {
         return id;
+    }
+
+    public String getRelease_date() {
+        return release_date;
     }
 }

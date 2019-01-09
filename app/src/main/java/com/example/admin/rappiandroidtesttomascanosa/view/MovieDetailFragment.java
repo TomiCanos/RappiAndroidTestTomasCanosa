@@ -1,44 +1,87 @@
 package com.example.admin.rappiandroidtesttomascanosa.view;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.admin.rappiandroidtesttomascanosa.R;
 import com.example.admin.rappiandroidtesttomascanosa.model.Movie;
+import com.example.admin.rappiandroidtesttomascanosa.utils.MoviesRecyclerViewSetter;
+import com.example.admin.rappiandroidtesttomascanosa.view.adapter.DataToMovieAdapter;
+
+import java.util.List;
 
 public class MovieDetailFragment extends Fragment {
 
-    private static final String MOVIE_ID = "MOVIE_LIST_ID";
+    private static final String MOVIE_ID = "MOVIE_ID";
 
     private ImageView image;
     private TextView title;
     private TextView overview;
+    private TextView voteAverage;
+    private TextView releaseDate;
     private Movie movie;
+    private String language;
+    private RecyclerView similarMoviesRecyclerView;
+    private MoviesRecyclerViewSetter horizontalSimilarMoviesRecyclerViewSetter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_movie_detail, container, false);
 
-        image = view.findViewById(R.id.movie_fragment_detail_image);
-        title  = view.findViewById(R.id.movie_fragment_detail_title);
-        overview = view.findViewById(R.id.movie_fragment_detail_overview);
+        final View view = inflater.inflate(R.layout.fragment_movie_detail, container, false);
+
+        image = view.findViewById(R.id.movie_detail_fragment_image);
+        title = view.findViewById(R.id.movie_detail_fragment_title);
+        overview = view.findViewById(R.id.movie_detail_fragment_overview);
+        voteAverage = view.findViewById(R.id.movie_detail_fragment_vote_average);
+        releaseDate = view.findViewById(R.id.movie_detail_fragment_release_date);
 
         Bundle bundle = getArguments();
 
         movie = (Movie) bundle.getSerializable(MOVIE_ID);
+        language = getResources().getConfiguration().locale.toString().replace("_", "-");
 
         title.setText(movie.getTitle());
         overview.setText(movie.getOverview());
+        releaseDate.setText(movie.getRelease_date());
+        String voteAverageAsString = movie.getVote_average();
+        voteAverage.setText(voteAverageAsString);
+        changeStringColorByVoteAverage(voteAverageAsString);
+
+        Glide.with(this).load("https://image.tmdb.org/t/p/w300" + movie.getBackdrop_path()).into(image);
+
+        similarMoviesRecyclerView = view.findViewById(R.id.movie_detail_fragment_recycler_view_similar_movies);
+        horizontalSimilarMoviesRecyclerViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
+            @Override
+            public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
+                //todo implementar recursividad de cuando clickeas una peli similar
+            }
+        });
+
+        horizontalSimilarMoviesRecyclerViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), LinearLayoutManager.HORIZONTAL);
 
         return view;
+    }
+
+    private String changeStringColorByVoteAverage(String voteAverageAsString) {
+        Double voteAverageAsDouble = Double.valueOf(voteAverageAsString);
+        if (voteAverageAsDouble < 7.0 && voteAverageAsDouble > 4) {
+            voteAverage.setTextColor(Color.YELLOW);
+        } else if (voteAverageAsDouble < 4) {
+            voteAverage.setTextColor(Color.RED);
+        }
+        return voteAverageAsString;
     }
 
     public static MovieDetailFragment movieAsFragmentConvertor(Movie movie) {

@@ -12,22 +12,28 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/movie_fragment_detail_image"
+            android:id="@+id/movie_detail_fragment_image"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_play"
+            android:src="@drawable/ic_play_arrow"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/movie_fragment_detail_image" />
+            app:layout_constraintTop_toTopOf="@+id/movie_detail_fragment_image" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
@@ -37,20 +43,52 @@
             app:layout_constraintGuide_begin="250dp" />
 
         <TextView
-            android:id="@+id/movie_fragment_detail_title"
+            android:id="@+id/movie_detail_fragment_title"
             style="@style/WhiteBoldString"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="30"
             android:textSize="20sp"
             app:layout_constraintTop_toTopOf="@+id/guideline" />
 
         <TextView
-            android:id="@+id/movie_fragment_detail_overview"
-            style="@style/WhiteBoldString"
+            android:id="@+id/movie_detail_fragment_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_detail_fragment_title" />
+
+        <TextView
+            android:id="@+id/movie_detail_fragment_release_date"
+            style="@style/GreyBoldString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/movie_detail_fragment_vote_average"
+            app:layout_constraintStart_toEndOf="@id/movie_detail_fragment_vote_average" />
+
+        <TextView
+            android:id="@+id/movie_detail_fragment_overview"
+            style="@style/GreyBoldString"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/movie_fragment_detail_title" />
+            app:layout_constraintTop_toBottomOf="@+id/movie_detail_fragment_vote_average" />
+
+        <TextView
+            android:id="@+id/movie_detail_fragment_recycler_view_similar_movies_text_view"
+            android:text="@string/movie_detail_fragment_recycler_title"
+            style="@style/WhiteBoldString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_overview"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/movie_detail_fragment_recycler_view_similar_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_recycler_view_similar_movies_text_view"></android.support.v7.widget.RecyclerView>
 
     </android.support.constraint.ConstraintLayout>
 

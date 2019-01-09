@@ -13,5 +13,7 @@ public interface MovieService {
     Call<MoviesContainer> getCategorizedMovies(@Path("category") String category, @Query("api_key") String apiKey,
                                                @Query("language") String language, @Query("page") Integer page);
 
-
+    @GET("/3/movie/{movie_id}/similar")
+    Call<MoviesContainer> getSimilarMovies(@Path("movie_id") String movieID, @Query("api_key") String apiKey,
+                                           @Query("language") String language, @Query("page") Integer page);
 }

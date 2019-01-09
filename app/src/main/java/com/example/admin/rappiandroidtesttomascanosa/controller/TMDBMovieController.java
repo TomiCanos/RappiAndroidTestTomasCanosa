@@ -33,4 +33,17 @@ public class TMDBMovieController {
 
     }
 
+    public void getSimilarMovies(String movieID, Integer page, String language,
+                                 final ResultListener<List<Movie>> resultListener) {
+        if (internetWorks) {
+            movieDAO.getSimilarMovies(movieID, language, page, new ResultListener<List<Movie>>() {
+                @Override
+                public void finish(List<Movie> result) {
+                    resultListener.finish(result);
+                }
+            });
+        }
+
+    }
+
 }

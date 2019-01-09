@@ -45,10 +45,9 @@ public class TMDBMovieDAO {
         service.getCategorizedMovies(category, API_KEY, language, page).enqueue(new Callback<MoviesContainer>() {
             @Override
             public void onResponse(Call<MoviesContainer> call, Response<MoviesContainer> response) {
-
                 MoviesContainer moviesContainer = response.body();
-                List<Movie> resultsAsMoviesList = moviesContainer.getResults();
-                resultListener.finish(resultsAsMoviesList);
+                List<Movie> resultsAsMovieList = moviesContainer.getResults();
+                resultListener.finish(resultsAsMovieList);
             }
 
             @Override
@@ -57,6 +56,23 @@ public class TMDBMovieDAO {
             }
         });
 
+    }
+
+    public void getSimilarMovies(String movieID, String language, Integer page, final ResultListener<List<Movie>> resultListener) {
+
+        service.getSimilarMovies(movieID, API_KEY, language, page).enqueue(new Callback<MoviesContainer>() {
+            @Override
+            public void onResponse(Call<MoviesContainer> call, Response<MoviesContainer> response) {
+                MoviesContainer moviesContainer = response.body();
+                List<Movie> resultsAsmovieList = moviesContainer.getResults();
+                resultListener.finish(resultsAsmovieList);
+            }
+
+            @Override
+            public void onFailure(Call<MoviesContainer> call, Throwable t) {
+                Log.e("retrofit", "failed");
+            }
+        });
     }
 
 }
