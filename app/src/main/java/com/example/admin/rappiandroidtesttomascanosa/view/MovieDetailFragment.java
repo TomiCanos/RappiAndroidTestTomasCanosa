@@ -1,14 +1,19 @@
 package com.example.admin.rappiandroidtesttomascanosa.view;
 
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,6 +39,8 @@ public class MovieDetailFragment extends Fragment {
     private String language;
     private RecyclerView similarMoviesRecyclerView;
     private MoviesRecyclerViewSetter horizontalSimilarMoviesRecyclerViewSetter;
+    private SelectionNofitier selectionNofitier;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,11 +72,16 @@ public class MovieDetailFragment extends Fragment {
         horizontalSimilarMoviesRecyclerViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
             @Override
             public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
-                //todo implementar recursividad de cuando clickeas una peli similar
+                selectionNofitier.openMovieDetail(movies,moviePosition);
             }
         });
 
-        horizontalSimilarMoviesRecyclerViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), LinearLayoutManager.HORIZONTAL);
+        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
+        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        float spanCount = dpWidth / 186;
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), Math.round(spanCount));
+        horizontalSimilarMoviesRecyclerViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), gridLayoutManager);
 
         return view;
     }
@@ -84,6 +96,12 @@ public class MovieDetailFragment extends Fragment {
         return voteAverageAsString;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        selectionNofitier = (SelectionNofitier) context;
+    }
+
     public static MovieDetailFragment movieAsFragmentConvertor(Movie movie) {
 
         MovieDetailFragment movieDetailFragment = new MovieDetailFragment();
@@ -93,4 +111,7 @@ public class MovieDetailFragment extends Fragment {
         return movieDetailFragment;
     }
 
+    public interface SelectionNofitier {
+        void openMovieDetail(List<Movie> movies, Integer moviePosition);
+    }
 }

@@ -13,7 +13,7 @@ import com.example.admin.rappiandroidtesttomascanosa.view.adapter.MovieToFragmen
 import java.util.List;
 
 
-public class MovieDetailActivity extends AppCompatActivity {
+public class MovieDetailActivity extends AppCompatActivity implements MovieDetailFragment.SelectionNofitier {
     public static final String MOVIE_LIST_ID = "MOVIE_LIST_ID";
     public static final String POSITION_ID = "POSITION_ID";
 
@@ -26,6 +26,15 @@ public class MovieDetailActivity extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         List<Movie> movies = (List<Movie>) bundle.getSerializable(MOVIE_LIST_ID);
         int moviePosition = bundle.getInt(POSITION_ID);
+        ViewPager viewPager = findViewById(R.id.movie_detail_activity_view_pager);
+        MovieToFragmentAdapter movieAdapterViewPager = new MovieToFragmentAdapter(getSupportFragmentManager(), movies);
+        viewPager.setAdapter(movieAdapterViewPager);
+        viewPager.setCurrentItem(moviePosition);
+        viewPager.setPageTransformer(true, new CubeTransformer());
+    }
+
+    @Override
+    public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
         ViewPager viewPager = findViewById(R.id.movie_detail_activity_view_pager);
         MovieToFragmentAdapter movieAdapterViewPager = new MovieToFragmentAdapter(getSupportFragmentManager(), movies);
         viewPager.setAdapter(movieAdapterViewPager);

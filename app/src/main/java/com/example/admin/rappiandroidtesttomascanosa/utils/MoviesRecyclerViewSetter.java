@@ -32,11 +32,11 @@ public class MoviesRecyclerViewSetter {
         movieAdapter = new DataToMovieAdapter(movieList, selectionNofitier);
     }
 
-    public void setCategorizedMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieControllerCategory, int linearLayoutManagerOrientation) {
+    public void setCategorizedMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieControllerCategory, RecyclerView.LayoutManager layoutManager) {
         this.movieControllerCategory = movieControllerCategory;
         getCategorizedMoviesFromAPI();
         moviesRecyclerView.setHasFixedSize(true);
-        moviesRecyclerView.setLayoutManager(new LinearLayoutManager(context, linearLayoutManagerOrientation, false));
+        moviesRecyclerView.setLayoutManager(layoutManager);
         moviesRecyclerView.setAdapter(movieAdapter);
 
         moviesRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -69,11 +69,11 @@ public class MoviesRecyclerViewSetter {
         getCategorizedMoviesFromAPI();
     }
 
-    public void setSimilarMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieID, int linearLayoutManagerOrientation) {
+    public void setSimilarMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieID, RecyclerView.LayoutManager layoutManager) {
         this.movieID = movieID;
         getSimilarMoviesFromAPI();
         moviesRecyclerView.setHasFixedSize(true);
-        moviesRecyclerView.setLayoutManager(new LinearLayoutManager(context, linearLayoutManagerOrientation, false));
+        moviesRecyclerView.setLayoutManager(layoutManager);
         moviesRecyclerView.setAdapter(movieAdapter);
 
         moviesRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {

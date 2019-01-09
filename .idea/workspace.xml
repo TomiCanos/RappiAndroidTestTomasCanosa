@@ -12,30 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba7cd574-fd92-407f-aaac-dbe7f38da9af" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play_arrow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-es/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-es/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/asd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/controller/TMDBMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/controller/TMDBMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/MovieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/adapter/MovieAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/adapter/DataToMovieAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/adapter/MovieAdapterViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/adapter/MovieToFragmentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mini_poster_cell.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mini_poster_cell.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +55,8 @@
       <file leaf-file-name="MovieDetailActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="409">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,17 +64,97 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieDetailFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java">
+      <file leaf-file-name="TMDBMovieDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="416">
+              <caret line="42" column="135" selection-start-line="42" selection-start-column="135" selection-end-line="42" selection-end-column="135" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2708#2976#0" expanded="true" />
-                <element signature="e#2975#2976#0" expanded="true" />
+                <element signature="method#TMDBMovieDAO#0;class#TMDBMovieDAO#0" />
+                <element signature="method#getCategorizedMovies#0;class#TMDBMovieDAO#0" />
+                <element signature="method#getSimilarMovies#0;class#TMDBMovieDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieDetailFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="74" column="72" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2945#3154#0" expanded="true" />
+                <element signature="e#3153#3154#0" expanded="true" />
                 <element signature="method#changeStringColorByVoteAverage#0;class#MovieDetailFragment#0" />
                 <element signature="method#movieAsFragmentConvertor#0;class#MovieDetailFragment#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_movie_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#3705#3751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asd.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/asd.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mini_poster_cell.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mini_poster_cell.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-327">
+              <caret line="26" column="48" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onStop#0;class#HomeFragment#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoviesRecyclerViewSetter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getCategorizedMoviesFromAPI#0;class#MoviesRecyclerViewSetter#0" />
+                <element signature="method#getSimilarMoviesFromAPI#0;class#MoviesRecyclerViewSetter#0" />
+                <element signature="method#getMoreSimilarMovies#0;class#MoviesRecyclerViewSetter#0" />
               </folding>
             </state>
           </provider>
@@ -2401,17 +2465,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/MovieService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/controller/TMDBMovieController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/adapter/DataToMovieAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/HorizontalMoviesRecyclerViewSetter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml" />
       </list>
     </option>
   </component>
@@ -2635,8 +2699,8 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Preview" order="3" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
+      <window_info anchor="right" id="Preview" order="3" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Logcat" order="7" />
@@ -2697,7 +2761,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="57" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -2872,16 +2936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mini_poster_cell.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -2929,16 +2983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/controller/TMDBMovieController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -2983,19 +3027,6 @@
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#TMDBMovieDAO#0;class#TMDBMovieDAO#0" />
-            <element signature="method#getCategorizedMovies#0;class#TMDBMovieDAO#0" />
-            <element signature="method#getSimilarMovies#0;class#TMDBMovieDAO#0" />
           </folding>
         </state>
       </provider>
@@ -3050,58 +3081,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="191">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAttach#0;class#HomeFragment#0" />
-            <element signature="method#onStop#0;class#HomeFragment#0" />
-            <element signature="class#SelectionNofitier#0;class#HomeFragment#0" />
+            <element signature="method#getCategorizedMoviesFromAPI#0;class#MoviesRecyclerViewSetter#0" />
+            <element signature="method#getSimilarMoviesFromAPI#0;class#MoviesRecyclerViewSetter#0" />
+            <element signature="method#getMoreSimilarMovies#0;class#MoviesRecyclerViewSetter#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/utils/MoviesRecyclerViewSetter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="-327">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#HorizontalMoviesRecyclerViewSetter#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#setCategorizedMoviesRecyclerView#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#getCategorizedMoviesFromAPI#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#getMoreCategorizedMovies#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#setSimilarMoviesRecyclerView#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#getSimilarMoviesFromAPI#0;class#HorizontalMoviesRecyclerViewSetter#0" />
-            <element signature="method#getMoreSimilarMovies#0;class#HorizontalMoviesRecyclerViewSetter#0" />
+            <element signature="method#onStop#0;class#HomeFragment#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mini_poster_cell.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="74" column="72" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2945#3154#0" expanded="true" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="method#changeStringColorByVoteAverage#0;class#MovieDetailFragment#0" />
+            <element signature="method#movieAsFragmentConvertor#0;class#MovieDetailFragment#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="409">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/view/MovieDetailFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/admin/rappiandroidtesttomascanosa/retrofit/TMDBMovieDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="416">
+          <caret line="42" column="135" selection-start-line="42" selection-start-column="135" selection-end-line="42" selection-end-column="135" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2708#2976#0" expanded="true" />
-            <element signature="e#2975#2976#0" expanded="true" />
-            <element signature="method#changeStringColorByVoteAverage#0;class#MovieDetailFragment#0" />
-            <element signature="method#movieAsFragmentConvertor#0;class#MovieDetailFragment#0" />
+            <element signature="method#TMDBMovieDAO#0;class#TMDBMovieDAO#0" />
+            <element signature="method#getCategorizedMovies#0;class#TMDBMovieDAO#0" />
+            <element signature="method#getSimilarMovies#0;class#TMDBMovieDAO#0" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#3705#3751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/asd.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
   </component>

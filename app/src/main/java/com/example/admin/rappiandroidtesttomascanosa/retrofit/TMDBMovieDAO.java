@@ -46,8 +46,10 @@ public class TMDBMovieDAO {
             @Override
             public void onResponse(Call<MoviesContainer> call, Response<MoviesContainer> response) {
                 MoviesContainer moviesContainer = response.body();
-                List<Movie> resultsAsMovieList = moviesContainer.getResults();
-                resultListener.finish(resultsAsMovieList);
+                if (moviesContainer != null)  {
+                    List<Movie> resultsAsmovieList = moviesContainer.getResults();
+                    resultListener.finish(resultsAsmovieList);
+                }
             }
 
             @Override
@@ -64,8 +66,10 @@ public class TMDBMovieDAO {
             @Override
             public void onResponse(Call<MoviesContainer> call, Response<MoviesContainer> response) {
                 MoviesContainer moviesContainer = response.body();
-                List<Movie> resultsAsmovieList = moviesContainer.getResults();
-                resultListener.finish(resultsAsmovieList);
+                if (moviesContainer != null)  {
+                    List<Movie> resultsAsmovieList = moviesContainer.getResults();
+                    resultListener.finish(resultsAsmovieList);
+                }
             }
 
             @Override

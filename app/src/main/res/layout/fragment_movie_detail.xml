@@ -21,6 +21,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/gradient"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
@@ -78,16 +79,18 @@
 
         <TextView
             android:id="@+id/movie_detail_fragment_recycler_view_similar_movies_text_view"
-            android:text="@string/movie_detail_fragment_recycler_title"
             style="@style/WhiteBoldString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_overview"/>
+            android:text="@string/movie_detail_fragment_recycler_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_overview" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/movie_detail_fragment_recycler_view_similar_movies"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_recycler_view_similar_movies_text_view"></android.support.v7.widget.RecyclerView>
 
     </android.support.constraint.ConstraintLayout>

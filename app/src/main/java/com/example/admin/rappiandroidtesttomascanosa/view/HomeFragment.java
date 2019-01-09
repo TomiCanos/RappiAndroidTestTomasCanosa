@@ -63,9 +63,12 @@ public class HomeFragment extends Fragment {
         topRatedMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_top_rated);
         upcomingMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_upcoming);
 
-        horizontalPopularMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(popularMoviesRecyclerView, TMDBMovieController.POPULAR, LinearLayoutManager.HORIZONTAL);
-        horizontalTopRatedMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(topRatedMoviesRecyclerView, TMDBMovieController.TOP_RATED, LinearLayoutManager.HORIZONTAL);
-        horizontalUpcomingMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(upcomingMoviesRecyclerView, TMDBMovieController.UPCOMING, LinearLayoutManager.HORIZONTAL);
+        horizontalPopularMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(popularMoviesRecyclerView,
+                TMDBMovieController.POPULAR, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+        horizontalTopRatedMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(topRatedMoviesRecyclerView,
+                TMDBMovieController.TOP_RATED, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+        horizontalUpcomingMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(upcomingMoviesRecyclerView,
+                TMDBMovieController.UPCOMING, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
 
 
         return view;
