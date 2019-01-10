@@ -1,27 +1,29 @@
 package com.example.admin.rappiandroidtesttomascanosa.model;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import java.io.Serializable;
 
+@Entity
 public class Movie implements Serializable {
+    @Ignore
+    private String id;
+    @PrimaryKey
+    @NonNull
     private String title;
     private String poster_path;
+    @Ignore
     private String backdrop_path;
     private String overview;
+    @Ignore
     private String vote_average;
-    private String id;
+    @Ignore
     private String release_date;
 
     public Movie(){}
-
-    public Movie(String title, String poster_path, String backdrop_path, String overview, String vote_average, String id, String release_date) {
-        this.title = title;
-        this.poster_path = poster_path;
-        this.backdrop_path = backdrop_path;
-        this.overview = overview;
-        this.vote_average = vote_average;
-        this.id = id;
-        this.release_date = release_date;
-    }
 
     public String getTitle() {
         return title;
@@ -49,5 +51,17 @@ public class Movie implements Serializable {
 
     public String getRelease_date() {
         return release_date;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
     }
 }

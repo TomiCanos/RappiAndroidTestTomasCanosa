@@ -1,4 +1,4 @@
-package com.example.admin.rappiandroidtesttomascanosa.retrofit;
+package com.example.admin.rappiandroidtesttomascanosa.dataLoader.api;
 
 import com.example.admin.rappiandroidtesttomascanosa.model.MoviesContainer;
 

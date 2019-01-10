@@ -24,6 +24,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+
         List<Movie> movies = (List<Movie>) bundle.getSerializable(MOVIE_LIST_ID);
         int moviePosition = bundle.getInt(POSITION_ID);
         ViewPager viewPager = findViewById(R.id.movie_detail_activity_view_pager);

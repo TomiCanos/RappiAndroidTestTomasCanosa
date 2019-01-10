@@ -25,7 +25,7 @@ public class MoviesRecyclerViewSetter {
 
     public MoviesRecyclerViewSetter(Context context, String language, DataToMovieAdapter.SelectionNofitier selectionNofitier) {
         pageNumber = 1;
-        movieController = new TMDBMovieController();
+        movieController = new TMDBMovieController(context);
         movieList = new ArrayList<>();
         this.context = context;
         this.language = language;

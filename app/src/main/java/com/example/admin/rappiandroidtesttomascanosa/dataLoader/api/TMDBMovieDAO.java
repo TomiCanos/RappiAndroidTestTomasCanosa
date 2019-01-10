@@ -1,4 +1,4 @@
-package com.example.admin.rappiandroidtesttomascanosa.retrofit;
+package com.example.admin.rappiandroidtesttomascanosa.dataLoader.api;
 
 import android.util.Log;
 
@@ -41,7 +41,6 @@ public class TMDBMovieDAO {
     }
 
     public void getCategorizedMovies(String category, String language, Integer page, final ResultListener<List<Movie>> resultListener) {
-
         service.getCategorizedMovies(category, API_KEY, language, page).enqueue(new Callback<MoviesContainer>() {
             @Override
             public void onResponse(Call<MoviesContainer> call, Response<MoviesContainer> response) {
@@ -55,9 +54,9 @@ public class TMDBMovieDAO {
             @Override
             public void onFailure(Call<MoviesContainer> call, Throwable t) {
                 Log.e("retrofit", "failed");
+                resultListener.finish(null);
             }
         });
-
     }
 
     public void getSimilarMovies(String movieID, String language, Integer page, final ResultListener<List<Movie>> resultListener) {
