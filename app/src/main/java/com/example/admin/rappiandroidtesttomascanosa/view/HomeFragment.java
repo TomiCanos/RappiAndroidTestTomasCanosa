@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.admin.rappiandroidtesttomascanosa.controller.TMDBMovieController;
+import com.example.admin.rappiandroidtesttomascanosa.controller.DataAsMovieController;
 import com.example.admin.rappiandroidtesttomascanosa.model.Movie;
 import com.example.admin.rappiandroidtesttomascanosa.R;
 import com.example.admin.rappiandroidtesttomascanosa.utils.MoviesRecyclerViewSetter;
@@ -64,11 +64,11 @@ public class HomeFragment extends Fragment {
         upcomingMoviesRecyclerView = view.findViewById(R.id.home_fragment_recycler_upcoming);
 
         horizontalPopularMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(popularMoviesRecyclerView,
-                TMDBMovieController.POPULAR, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+                DataAsMovieController.POPULAR, new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         horizontalTopRatedMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(topRatedMoviesRecyclerView,
-                TMDBMovieController.TOP_RATED, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+                DataAsMovieController.TOP_RATED, new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         horizontalUpcomingMoviesRecyclerViewSetter.setCategorizedMoviesRecyclerView(upcomingMoviesRecyclerView,
-                TMDBMovieController.UPCOMING, new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+                DataAsMovieController.UPCOMING, new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
 
         return view;

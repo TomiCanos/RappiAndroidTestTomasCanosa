@@ -34,7 +34,7 @@ public class MovieDetailFragment extends Fragment {
     private Movie movie;
     private String language;
     private RecyclerView similarMoviesRecyclerView;
-    private MoviesRecyclerViewSetter similarMoviesGridViewSetter ;
+    private MoviesRecyclerViewSetter similarTitlesGridViewSetter;
     private SelectionNofitier selectionNofitier;
 
 
@@ -55,17 +55,29 @@ public class MovieDetailFragment extends Fragment {
         movie = (Movie) bundle.getSerializable(MOVIE_ID);
         language = getResources().getConfiguration().locale.toString().replace("_", "-");
 
+        String nothing = "";
+
+        if (movie.getRelease_date() != null) {
+            releaseDate.setText(movie.getRelease_date());
+        } else {
+            releaseDate.setText(nothing);
+        }
+
+        if (movie.getVote_average() != null) {
+            String voteAverageAsString = movie.getVote_average();
+            voteAverage.setText(voteAverageAsString);
+            changeStringColorByVoteAverage(voteAverageAsString);
+        } else {
+            voteAverage.setText(nothing);
+        }
+
         title.setText(movie.getTitle());
         overview.setText(movie.getOverview());
-        releaseDate.setText(movie.getRelease_date());
-        String voteAverageAsString = movie.getVote_average();
-        voteAverage.setText(voteAverageAsString);
-        changeStringColorByVoteAverage(voteAverageAsString);
 
         Glide.with(this).load("https://image.tmdb.org/t/p/w300" + movie.getBackdrop_path()).into(image);
 
-        similarMoviesRecyclerView = view.findViewById(R.id.movie_detail_fragment_recycler_view_similar_movies);
-        similarMoviesGridViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
+        similarMoviesRecyclerView = view.findViewById(R.id.movie_detail_fragment_recycler_view_similar_titles);
+        similarTitlesGridViewSetter = new MoviesRecyclerViewSetter(getContext(), language, new DataToMovieAdapter.SelectionNofitier() {
             @Override
             public void openMovieDetail(List<Movie> movies, Integer moviePosition) {
                 selectionNofitier.openMovieDetail(movies, moviePosition);
@@ -77,7 +89,7 @@ public class MovieDetailFragment extends Fragment {
         float spanCount = dpWidth / 186;
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), Math.round(spanCount));
-        similarMoviesGridViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), gridLayoutManager);
+        similarTitlesGridViewSetter.setSimilarMoviesRecyclerView(similarMoviesRecyclerView, movie.getId(), gridLayoutManager);
 
         return view;
     }

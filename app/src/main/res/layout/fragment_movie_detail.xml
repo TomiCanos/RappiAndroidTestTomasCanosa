@@ -78,7 +78,7 @@
             app:layout_constraintTop_toBottomOf="@+id/movie_detail_fragment_vote_average" />
 
         <TextView
-            android:id="@+id/movie_detail_fragment_recycler_view_similar_movies_text_view"
+            android:id="@+id/movie_detail_fragment_recycler_view_similar_titles_text_view"
             style="@style/WhiteBoldString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,12 +86,12 @@
             app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_overview" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/movie_detail_fragment_recycler_view_similar_movies"
+            android:id="@+id/movie_detail_fragment_recycler_view_similar_titles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_recycler_view_similar_movies_text_view"></android.support.v7.widget.RecyclerView>
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_fragment_recycler_view_similar_titles_text_view"></android.support.v7.widget.RecyclerView>
 
     </android.support.constraint.ConstraintLayout>
 

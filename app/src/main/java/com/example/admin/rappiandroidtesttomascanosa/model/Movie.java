@@ -9,10 +9,9 @@ import java.io.Serializable;
 
 @Entity
 public class Movie implements Serializable {
-    @Ignore
-    private String id;
     @PrimaryKey
     @NonNull
+    private String id;
     private String title;
     private String poster_path;
     @Ignore
@@ -22,8 +21,10 @@ public class Movie implements Serializable {
     private String vote_average;
     @Ignore
     private String release_date;
+    private String category;
 
-    public Movie(){}
+    public Movie() {
+    }
 
     public String getTitle() {
         return title;
@@ -51,6 +52,18 @@ public class Movie implements Serializable {
 
     public String getRelease_date() {
         return release_date;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setId(@NonNull String id) {
+        this.id = id;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public void setTitle(String title) {

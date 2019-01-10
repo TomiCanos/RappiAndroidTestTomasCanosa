@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.admin.rappiandroidtesttomascanosa.controller.TMDBMovieController;
+import com.example.admin.rappiandroidtesttomascanosa.controller.DataAsMovieController;
 import com.example.admin.rappiandroidtesttomascanosa.model.Movie;
 import com.example.admin.rappiandroidtesttomascanosa.view.adapter.DataToMovieAdapter;
 
@@ -16,25 +16,23 @@ public class MoviesRecyclerViewSetter {
 
     private DataToMovieAdapter movieAdapter;
     private List<Movie> movieList;
-    private TMDBMovieController movieController;
+    private DataAsMovieController movieController;
     private Integer pageNumber;
     private String movieControllerCategory;
     private String language;
-    private Context context;
     private String movieID;
 
     public MoviesRecyclerViewSetter(Context context, String language, DataToMovieAdapter.SelectionNofitier selectionNofitier) {
         pageNumber = 1;
-        movieController = new TMDBMovieController(context);
+        movieController = new DataAsMovieController(context);
         movieList = new ArrayList<>();
-        this.context = context;
         this.language = language;
         movieAdapter = new DataToMovieAdapter(movieList, selectionNofitier);
     }
 
     public void setCategorizedMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieControllerCategory, RecyclerView.LayoutManager layoutManager) {
         this.movieControllerCategory = movieControllerCategory;
-        getCategorizedMoviesFromAPI();
+        getCategorizedMovies();
         moviesRecyclerView.setHasFixedSize(true);
         moviesRecyclerView.setLayoutManager(layoutManager);
         moviesRecyclerView.setAdapter(movieAdapter);
@@ -54,7 +52,7 @@ public class MoviesRecyclerViewSetter {
         });
     }
 
-    private void getCategorizedMoviesFromAPI() {
+    private void getCategorizedMovies() {
         movieController.getCategorizedMovies(movieControllerCategory, pageNumber, language, new ResultListener<List<Movie>>() {
             @Override
             public void finish(List<Movie> result) {
@@ -66,12 +64,12 @@ public class MoviesRecyclerViewSetter {
 
     private void getMoreCategorizedMovies() {
         pageNumber++;
-        getCategorizedMoviesFromAPI();
+        getCategorizedMovies();
     }
 
     public void setSimilarMoviesRecyclerView(RecyclerView moviesRecyclerView, String movieID, RecyclerView.LayoutManager layoutManager) {
         this.movieID = movieID;
-        getSimilarMoviesFromAPI();
+        getSimilarMovies();
         moviesRecyclerView.setHasFixedSize(true);
         moviesRecyclerView.setLayoutManager(layoutManager);
         moviesRecyclerView.setAdapter(movieAdapter);
@@ -91,7 +89,7 @@ public class MoviesRecyclerViewSetter {
         });
     }
 
-    private void getSimilarMoviesFromAPI() {
+    private void getSimilarMovies() {
         movieController.getSimilarMovies(movieID, pageNumber, language, new ResultListener<List<Movie>>() {
             @Override
             public void finish(List<Movie> result) {
@@ -103,7 +101,7 @@ public class MoviesRecyclerViewSetter {
 
     private void getMoreSimilarMovies() {
         pageNumber++;
-        getSimilarMoviesFromAPI();
+        getSimilarMovies();
     }
 
 }

@@ -29,4 +29,7 @@ public interface RoomMovieDAO {
     @Query("SELECT * FROM Movie")
     LiveData<List<Movie>> getAllMovies();
 
+    @Query("SELECT * FROM Movie WHERE category = :movieCategory")
+    LiveData<List<Movie>> getAllMoviesByCategory(String movieCategory);
+
 }
