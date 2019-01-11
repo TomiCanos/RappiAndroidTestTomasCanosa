@@ -1,4 +1,11 @@
 RappiAndroidTestTomasCanosa
+Cosas que me hubiera gustado agregar:
+CollapseBar con el logo de Rappi en el Home, lo tenia pero no llegue a arreglar pequeños bugs y lo tuve que sacar :(.
+CollapseBar en el detalle con toda la info dentro de la Bar y las similares afuera, al estilo spotify con el nombre de la playlist y las canciones de la playlist.
+Arreglo del Viewpager con el GridView que de vez en cuando se autoscrollea para arriba dios sabe por que. No lo pude sacar porque si ponia un LinearRecyclerView no me gustaba como quedaba esteticamente.
+Implementar los buscadores que era una pabada pero no llegue porque se me complico leer los datos de la persistencia offline de datos.
+
+Tipos de capas:
 
 Capa de presentación:
 HomeFragment, MainActivity, MovieDetailActivity, MovieDetailFragment.
